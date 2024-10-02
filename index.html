@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Layout</title>
+    <style>
+        /* Stile di base */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('https://imagedelivery.net/A5gbiev6F8AaBvp6M146Kw/870610f9-a6cf-4e54-8c8c-6117ea986e00/w=1440');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Stili per il menu verticale */
+        .vertical-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-menu a, .right-menu a {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+            transition: background-color 0.3s ease;
+        }
+
+        .left-menu a:hover, .right-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Stile per il banner */
+        .banner {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // Funzione per reindirizzare al link
+        function redirectToImage() {
+            window.location.href = 'https://imagedelivery.net/A5gbiev6F8AaBvp6M146Kw/a2f290e6-d128-4500-6b64-a0389d357200/w=1440';
+        }
+
+        // Aggiungere event listener ai tasti dopo che la pagina è stata caricata
+        window.onload = function() {
+            const links = document.querySelectorAll('.vertical-menu a');
+            links.forEach(link => {
+                link.addEventListener('click', redirectToImage);
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Menu verticale a sinistra -->
+        <div class="vertical-menu left-menu">
+            <a href="#">Game 1</a>
+        
+           
+        </div>
+
+        <!-- Banner centrale -->
+        <div class="banner">
+            <img src="https://imagedelivery.net/A5gbiev6F8AaBvp6M146Kw/90999e95-80c5-4e38-b100-a01309c69800/w=1440" alt="Banner" class="banner-img">
+        </div>
+
+        <!-- Menu verticale a destra -->
+        <div class="vertical-menu right-menu">
+            <a href="#">Category 1</a>
+          
+       
+        </div>
+    </div>
+</body>
+</html>
